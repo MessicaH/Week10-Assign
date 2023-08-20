@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 - JS and DOM</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <h1>D&D Adventuring Group Roster</h1>
+    </div>
+    <div class="container">
+        <p>Add a new row to the table. This should include:</p>
+        <ul>
+            <li>D&D Player's name</li>
+            <li>Their character's name</li>
+            <li>D&D Class (of character)</li>
+            <li>D&D Race (of character)</li>
+            <li>D&D Knowledge Level (of player)</li>
+        </ul>
+    </div>
+    
+    <br>
+    
+    <div class="card">
+        <p>Player Roster </p>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="player-name">Player Name</label>
+                        <input type="text" class="form-control" id="player-name" name="player-name">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="character-name">Character Name</label>
+                        <input type="text" class="form-control" id="character-name">
+                    </div>
+                </div>
+            </div>
+        <!--Form doesn't like adding in Checkbox options either. Need to connect each option's value to id for "dnd-class" -->
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="dnd-race">D&D Race</label>
+                        <input type="text" class="form-control" id="dnd-race">
+                        <ul>
+                            <li>Dragonborn</li>
+                            <li>Dwarf</li>  
+                            <li>Elf</li>
+                            <li>Gnome</li>
+                            <li>Half-Elf</li>
+                            <li>Halfling</li>
+                            <li>Half-Orc</li>
+                            <li>Human</li>
+                            <li>Tiefling</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="dnd-class">D&D Class</label>
+                        <input type="text" class="form-control" id="dnd-class">
+                    <!--Ideally this would be a working Checkbox selection option of the form-->
+                        <input type="checkbox"
+                        id="barbarian"
+                        name="dnd-class"
+                        value="barbarian"/>
+                        <label for="barbarian">Barbarian</label>
+                        <br>
+                        <input type="checkbox"
+                            id="bard"
+                            name="dnd-class"
+                            value="bard"/>
+                        <label for="bard">Bard</label>
+                        <br>
+                        <input type="checkbox"
+                            id="cleric"
+                            name="dnd-class"
+                            value="cleric"/>
+                        <label for="cleric">Cleric</label>
+                        <br>
+                        <input type="checkbox"
+                        id="druid"
+                        name="dnd-class"
+                        value="druid"/>
+                        <label for="druid">Druid</label>
+                        <br>
+                        <input type="checkbox"
+                        id="fighter"
+                        name="dnd-class"
+                        value="fighter"/>
+                        <label for="fighter">Fighter</label>
+                        <br>
+                    <!--End of list to include:
+                        Monk
+                        Paladin
+                        Ranger
+                        Rogue
+                        Sorcerer
+                        Warlock
+                        Wizard-->
+                    </div>
+                </div>
+           
+                <div class="row">
+                    <div class="col-md">
+                        <div class="form-group">
+                            <label for="know-level">D&D Knowledge Level</label>
+                            <input type="text" class="form-control" name="know-level" id="know-level" >
+                            <!--This form does not like adding Select options for this field.
+                            "Add new Member" button disappears when adding in fancier input types.
+                            Leaving Select options as list to enter info from.-->
+                                <option value="novice">Novice - I'm new to all of this</option>
+                                <option value="mid-exp">Middle - I've played a bit but looking to refresh my skills</option>
+                                <option value="expert">Expert - I have led many friends into battle and glorious victory</option>                  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row"> <!--I tried to put the button onto a separate row, thinking that maybe the info/fields above were making it disapper-->
+                <div>
+                    <button id="add-player" class="btn btn-primary from-control, form-control">Add new Member</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <table id="player-list" class="table table-dark table-striped">
+        <tr>
+            <th>Player Name</th>
+            <th>Character Name</th>
+            <th>D&D Class</th>
+            <th>D&D Race</th>
+            <th>Knowledge Level</th>
+        </tr>
+    </table>
+
+
+    <script src="week10.js"></script>
+<!--These are the node_module files for the page(s) that are found in the .gitignore file-->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src ="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

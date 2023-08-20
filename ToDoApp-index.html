@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <!--The following is the default Bootstrap CSS for the page from installing via CMD-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+    <br>
+    <div class="card">
+        <p>Hello</p>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-start-date">Start Date</label>
+                        <input type="date" class="form-control" id="new-start-date">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-end-date">End Date</label>
+                        <input type="date" class="form-control" id="new-end-date">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-task">New Task</label>
+                        <input type="text" class="form-control" id="new-task" placeholder="Task to-do">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="add-task" class="btn btn-primary from-control">Add task</button>
+            </div>
+        </div>
+    </div>
+
+    <table id="todo-list" class="table table-dark table-striped">
+        <tr>
+            <th>Task</th>
+            <th>Date Created</th>
+            <th>Start Date</th>
+            <th>Due Date</th>
+            <th>Action(s)</th>
+        </tr>
+    </table>
+
+
+    <script src="ToDoApp-js.js"></script>
+<!--These are the node_module files for the page(s) that are found in the .gitignore file-->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src ="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

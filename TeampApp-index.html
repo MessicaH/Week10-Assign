@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team App</title>
+    <!--The following is the default Bootstrap CSS for the page from installing via CMD-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body class="container">
+    
+    <br>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-team-name">Team Name</label>
+                        <input type="text" class="form-control" id="new-team-name">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="new-team" class="btn btn-primary form-control" width="600px">Create</button>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div id="teams">
+        <!--This is where the functions in the JS file automatically update and write code for the table.
+            For some reason, doesn't fill in background and blank text for third <th> column 
+            above "Create" button-->
+    </div>
+
+
+    <script src="TeamApp-js.js"></script>
+<!--These are the node_module files for the page(s) that are found in the .gitignore file-->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src ="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
